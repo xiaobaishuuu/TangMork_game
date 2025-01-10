@@ -2,13 +2,13 @@ import os,sys
 import builtins
 import time
 
-if getattr(sys,'frozen',False):
-    ABS_PATH = os.path.dirname(os.path.abspath(sys.executable))
-elif __file__:
-    ABS_PATH = os.path.dirname(os.path.abspath(__file__))
+# if getattr(sys,'frozen',False):
+#     ABS_PATH = os.path.dirname(os.path.abspath(sys.executable))
+# elif __file__:
+#     ABS_PATH = os.path.dirname(os.path.abspath(__file__))
 
-ABS_PATH = ABS_PATH.replace('\dist','')
-sys.path.append(ABS_PATH)
+# ABS_PATH = ABS_PATH.replace('\dist','')
+# sys.path.append(ABS_PATH)
 from TangMork import *
 
 def main():
@@ -25,6 +25,6 @@ def main():
     #====================================#
     builtins.print = original_print      # 还原 print 函数
 
-if __name__ == "\n__main__":
+if __name__ == "__main__":
     main()
 

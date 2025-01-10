@@ -2,13 +2,17 @@ import jsonpath,json
 import os,sys
 
 class Data:
-    if getattr(sys,'frozen',False):
-        ABS_PATH = os.path.dirname(os.path.abspath(sys.executable))
-    elif __file__:
-        ABS_PATH = os.path.dirname(os.path.abspath(__file__))
-    ABS_PATH = ABS_PATH.replace('\code\dist','\data')
+    # if getattr(sys,'frozen',False):
+    #     ABS_PATH = os.path.dirname(os.path.abspath(sys.executable))
+    # elif __file__:
+    #     ABS_PATH = os.path.dirname(os.path.abspath(__file__))
+    # ABS_PATH = ABS_PATH.replace('\code\dist','\data')
 
-    obj = json.load(open(f'{ABS_PATH}'r'\data.json',encoding='utf-8'))
+    # obj = json.load(open(f'{ABS_PATH}'r'\data.json',encoding='utf-8'))
+
+    path = os.path.dirname(__file__).replace('code','data') + '\\data.json'
+    obj = json.load(open(path,encoding='utf-8'))
+
     run_death = jsonpath.jsonpath(obj,"$..run_death")[0]
     boss_talk = jsonpath.jsonpath(obj,"$..boss_talk")[0]
     
