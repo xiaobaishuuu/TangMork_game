@@ -1,0 +1,79 @@
+{
+    "choice": [{
+        "index": 1,
+        "name": "练秘级"
+    }, {
+        "index": 2,
+        "name": "打BOSS"
+    }, {
+        "index": 3,
+        "name": "逃跑"
+    }, {
+        "index": 4,
+        "name": "退出游戏"
+    }],
+
+    "event": {
+        "run_death": [
+            "你摔倒了，你死了",
+            "佛祖都看不下去，一掌拍死你",
+            "一把七星剑从天上掉了下来，你被砍死了",
+            "太上老君看你跑的累，奖励你个蝙蝠，你染上了新冠病毒，你病死了",
+            "你路过了一家苹果手机店，你买了一部iPhone14ProMax,但他不配充电线，你很生气，你气死了"
+        ],
+        "boss_talk": [
+            "去死吧",
+            "送你个新冠病毒，能不能活下去就看你了",
+            "哈哈哈哈哈哈哈哈哈哈哈哈，有肉吃了"
+        ]
+    },
+
+    "tools": {
+        "ordinary": [{
+                "class": "attack",
+                "id": 1,
+                "name": "七星剑",
+                "describe": "一把七星剑从天上掉了下来，但你不知为何接住了",
+                "damage": 50,
+                "defense": 0,
+                "durability": 5
+            },
+            {
+                "class": "attack",
+                "id": 2,
+                "name": "如来神掌",
+                "describe": "经历七七 八十九天的苦练后，你得到了周星驰的真传《如来神掌》",
+                "damage": 50,
+                "defense": 0,
+                "durability": 5
+            }
+        ],
+        "extraordinary": [{
+                "class": "defense",
+                "id": 401,
+                "name": "sb金属",
+                "describe": "火星人当失路，你把他带回家后他为了报答你给了你一个sb金属，据说防御999+",
+                "damage": 0,
+                "defense": 999,
+                "durability": 2
+            },
+            {
+                "class": "attack",
+                "id": 402,
+                "name": "法杖",
+                "describe": "你捡到了一个法杖，到底怎么用呢？《!ejf2?》",
+                "damage": 1500,
+                "defense": 0,
+                "durability": 1
+            }, {
+                "class": "attack",
+                "id": 403,
+                "name": "桃木剑",
+                "describe": "百岁老人给了你一把桃木剑,据说一刀999",
+                "damage": 999,
+                "defense": 0,
+                "durability": 1
+            }
+        ]
+    }
+}

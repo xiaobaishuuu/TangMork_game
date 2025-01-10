@@ -1,0 +1,34 @@
+import os,sys
+import builtins
+import time
+
+# if getattr(sys,'frozen',False):
+#     ABS_PATH = os.path.dirname(os.path.abspath(sys.executable))
+# elif __file__:
+#     ABS_PATH = os.path.dirname(os.path.abspath(__file__))
+
+# ABS_PATH = ABS_PATH.replace('\dist','')
+# sys.path.append(ABS_PATH)
+from TangMork import *
+
+#=========WARNING(会引起音效不稳定)==========
+WAITING_TIME = 1
+#==============字幕出现间隔==================
+
+def main():
+    original_print = builtins.print      # 保存原始的 print 函数引用
+    def print_hook(*args, **kwargs):
+        original_print(*args, **kwargs)  # 调用原始的 print 函数
+        time.sleep(WAITING_TIME)
+    builtins.print = print_hook          # 替换 print 函数
+    #====================================#ss
+    # 在这里编写需要执行的 Python 代码
+    game = TangMork()
+    game.start()
+    game.choice()
+    #====================================#
+    builtins.print = original_print      # 还原 print 函数
+
+if __name__ == "__main__":
+    main()
+

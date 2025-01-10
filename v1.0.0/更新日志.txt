@@ -1,0 +1,12 @@
+version 1.0.0
+
+1.回炉重造
+  -- 将原有的一个py源文件拆分为data.py,TangMork.py以及main.py
+  -- 将武器数据，语言数据存入data.json，用data.py取出
+  -- 将原代码以class的方式重写，方便管理
+  -- main.py文件将调用主文件TangMork.py
+
+2.修复
+  -- 致命bug：修复了练级完后被boss打死后被复活后出现 IndexError 的错误
+  -- 修复了防御并没有任何用的问题
+  -- 修复了不明显的一些小问题
